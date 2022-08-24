@@ -1,11 +1,12 @@
 /** @jsx h */
-import { h } from 'preact';
+import { FunctionalComponent as FC, h } from 'preact';
 import { Provider } from 'react-redux'
 import store from './store.ts'
 
-const StoreProvider = (props: any) => (
+// deno-lint-ignore no-explicit-any
+const StoreProvider: FC<{ children: any }> = (props) => (
     <Provider store={store}>
-        {props.chidren}
+        {props.children}
     </Provider>
 )
 
