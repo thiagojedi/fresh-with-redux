@@ -5,6 +5,7 @@
 import * as $0 from "./routes/index.tsx";
 import * as $$0 from "./islands/counter-buttons-island.tsx";
 import * as $$1 from "./islands/counter-label-island.tsx";
+import * as $$2 from "./islands/counter.tsx";
 
 const manifest = {
   routes: {
@@ -13,6 +14,7 @@ const manifest = {
   islands: {
     "./islands/counter-buttons-island.tsx": $$0,
     "./islands/counter-label-island.tsx": $$1,
+    "./islands/counter.tsx": $$2,
   },
   baseUrl: import.meta.url,
 };

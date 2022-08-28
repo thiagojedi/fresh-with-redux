@@ -2,8 +2,8 @@
 import { h } from "preact";
 
 import CounterButtonsIsland from "../islands/counter-buttons-island.tsx";
-import CounterLabelIsland from '../islands/counter-label-island.tsx'
-
+import CounterLabelIsland from "../islands/counter-label-island.tsx";
+import Counter from "../islands/counter.tsx";
 
 export default function Home() {
   return (
@@ -17,12 +17,22 @@ export default function Home() {
         Welcome to `fresh`. Try updating this message in the ./routes/index.tsx
         file, and refresh.
       </p>
-      <p>
-      <CounterLabelIsland />
-      </p>
-      <p>
-      <CounterButtonsIsland />
-      </p>
+
+      <div>
+        <Counter step={3} />
+      </div>
+
+      <div
+        style={{
+          margin: "10px 0",
+        }}
+      >
+        <p>
+          <CounterLabelIsland />
+        </p>
+
+        <CounterButtonsIsland />
+      </div>
     </div>
   );
 }

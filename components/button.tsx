@@ -1,11 +1,19 @@
 /** @jsx h */
-import { FunctionalComponent, h } from 'preact';
-import { useAppDispatch } from '../store/store.ts';
+import { FunctionalComponent, h } from "preact";
+import { useAppDispatch } from "../store/store.ts";
 
-const Button: FunctionalComponent<{ type: string, value?: number, label: string }> = (props) => {
-    const dispatch = useAppDispatch();
+const Button: FunctionalComponent<
+  { type: string; value?: number; label: string }
+> = (props) => {
+  const dispatch = useAppDispatch();
 
-    return <button onClick={() => dispatch({ type: props.type, payload: props.value })}>{props.label}</button>
-}
+  return (
+    <button
+      onClick={() => dispatch({ type: props.type, payload: props.value })}
+    >
+      {props.label}
+    </button>
+  );
+};
 
 export default Button;
